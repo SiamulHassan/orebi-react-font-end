@@ -1,11 +1,13 @@
 // import React from 'react'
 
-const ListItem = ({ itemName, className }) => {
+import { Link } from "react-router-dom";
+
+const ListItem = ({ itemName, className, href }) => {
   return (
     <li className={className}>
-      <a href="#" className="group-hover:font-bold">
+      <Link to={href} className="group-hover:font-bold">
         {itemName}
-      </a>
+      </Link>
     </li>
   );
 };
