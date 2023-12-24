@@ -6,6 +6,9 @@ export default {
       maxWidth: {
         container: "1604px",
       },
+      colors: {
+        primary: "#f5f5f3",
+      },
       fontFamily: {
         dm: ["DM Sans", "sans-serif"],
       },

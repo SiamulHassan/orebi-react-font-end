@@ -5,8 +5,10 @@ import Container from "./Container";
 import Flex from "./Flex";
 import Dropdown from "./Dropdown";
 import { HiOutlineBars2 } from "react-icons/hi2";
+import { IoIosSearch } from "react-icons/io";
 import List from "./List";
 import ListItem from "./ListItem";
+import Search from "./Search";
 const Header = () => {
   const dropDownRef = useRef(null);
   const [show, setShow] = useState(false);
@@ -21,9 +23,9 @@ const Header = () => {
   }, []);
   return (
     <>
-      <div className="bg-[#f5f5f3]">
+      <div className="bg-primary py-4">
         <Container>
-          <Flex className="flex justify-between">
+          <Flex className="flex items-center justify-between gap-5">
             <div>
               <Dropdown
                 className="relative cursor-pointer"
@@ -63,7 +65,13 @@ const Header = () => {
                 )}
               </Dropdown>
             </div>
-            <p>2</p>
+            <div className="relative w-[600px]">
+              <Search
+                className="w-full px-5 py-4"
+                placeholder="Search Products"
+              />
+              <IoIosSearch className="absolute right-4 top-1/2 h-6 w-6 -translate-y-1/2" />
+            </div>
             <p>3</p>
           </Flex>
         </Container>
