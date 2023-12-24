@@ -24,27 +24,39 @@ const Navbar = () => {
     window.addEventListener("resize", menuBreakpoint);
   }, []);
   return (
-    <nav>
+    <nav className="py-6">
       <Container>
-        <Flex className="lg:flex lg:justify-between lg:items-center">
+        <Flex className="lg:flex lg:items-center lg:justify-between">
           <div className="w-1/4">
             <Image imageSrc={logo} />
           </div>
           <div className=" w-full lg:w-3/4">
             <FaBarsStaggered
-              className="absolute top-2.5 right-2.5 ml-auto lg:hidden cursor-pointer"
+              className="absolute right-2.5 top-2.5 ml-auto cursor-pointer lg:hidden"
               onClick={() => setShow(!show)}
             />
             {show && (
-              <List className="mt-5 lg:mt-0 lg:flex lg:justify-end font-dm text-sm text lg:gap-10">
-                <ListItem itemName="Home" className="group my-2.5 lg:my-0" />
-                <ListItem itemName="Shop" className="group my-2.5 lg:my-0" />
-                <ListItem itemName="About" className="group my-2.5 lg:my-0" />
+              <List className="text mt-5 font-dm text-sm lg:mt-0 lg:flex lg:justify-end lg:gap-10">
+                <ListItem
+                  itemName="Home"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                />
+                <ListItem
+                  itemName="Shop"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                />
+                <ListItem
+                  itemName="About"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                />
                 <ListItem
                   itemName="Contacts"
-                  className="group my-2.5 lg:my-0"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
                 />
-                <ListItem itemName="Journal" className="group my-2.5 lg:my-0" />
+                <ListItem
+                  itemName="Journal"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                />
               </List>
             )}
           </div>

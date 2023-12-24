@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 const ListItem = ({ itemName, className, href }) => {
   return (
     <li className={className}>
-      <Link to={href} className="group-hover:font-bold">
-        {itemName}
-      </Link>
+      <Link to={href}>{itemName}</Link>
     </li>
   );
 };
