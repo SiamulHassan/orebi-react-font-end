@@ -24,7 +24,7 @@ const Navbar = () => {
     window.addEventListener("resize", menuBreakpoint);
   }, []);
   return (
-    <nav className="py-6">
+    <nav className="py-4 lg:py-6">
       <Container>
         <Flex className="lg:flex lg:items-center lg:justify-between">
           <div className="w-1/4">
@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <div className=" w-full lg:w-3/4">
             <FaBarsStaggered
-              className="absolute right-2.5 top-2.5 ml-auto cursor-pointer lg:hidden"
+              className="absolute right-2.5 top-8 ml-auto cursor-pointer lg:hidden"
               onClick={() => setShow(!show)}
             />
             {show && (

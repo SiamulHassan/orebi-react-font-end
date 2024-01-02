@@ -8,6 +8,8 @@ export default {
       },
       colors: {
         primary: "#f5f5f3",
+        secondary: "#767676",
+        colorBlack: "#262626",
       },
       fontFamily: {
         dm: ["DM Sans", "sans-serif"],

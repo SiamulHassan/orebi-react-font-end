@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import Flex from "./Flex";
 import Dropdown from "./Dropdown";
-import { HiOutlineBars2 } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { GoTriangleDown } from "react-icons/go";
 import { LiaTimesSolid } from "react-icons/lia";
+import { CgMenuRightAlt } from "react-icons/cg";
 import List from "./List";
 import ListItem from "./ListItem";
 import Search from "./Search";
@@ -44,17 +44,19 @@ const Header = () => {
   }, []);
   return (
     <>
-      <div className="bg-primary py-4">
+      <div className="bg-primary py-2 lg:py-4">
         <Container>
           <Flex className="flex items-center justify-between gap-5">
             <div>
               <Dropdown
-                className="relative cursor-pointer"
+                className="relative z-50 cursor-pointer"
                 dropDownRef={categoryDropdownRef}
               >
                 <div className="flex items-center gap-2">
-                  <HiOutlineBars2 />
-                  <span>Shop by Category</span>
+                  <CgMenuRightAlt className="text-2xl lg:text-xl" />
+                  <span className="hidden lg:inline-block">
+                    Shop by Category
+                  </span>
                 </div>
                 {showCategoryDropdown && (
                   <List className="absolute left-0 top-9 w-[243px] rounded bg-[#262626] font-dm text-sm text-[#a7a7a7]">
@@ -86,16 +88,16 @@ const Header = () => {
                 )}
               </Dropdown>
             </div>
-            <div className="relative w-[600px]">
+            <div className="relative w-auto lg:w-[600px]">
               <Search
-                className="w-full px-5 py-4"
+                className="w-full py-2 pl-3 pr-8 lg:py-4 lg:pl-5 lg:pr-12"
                 placeholder="Search Products"
               />
-              <IoIosSearch className="absolute right-4 top-1/2 h-6 w-6 -translate-y-1/2" />
+              <IoIosSearch className="h:5 absolute right-2 top-1/2 w-5 -translate-y-1/2 lg:right-4 lg:h-6 lg:w-6" />
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-2 lg:gap-6">
               <Dropdown
-                className="relative font-dm text-sm font-bold"
+                className="relative z-50 font-dm text-sm font-bold"
                 dropDownRef={userRef}
               >
                 <Flex className="flex cursor-pointer items-center gap-1">
@@ -117,7 +119,7 @@ const Header = () => {
                 )}
               </Dropdown>
 
-              <Dropdown className="relative" dropDownRef={cartRef}>
+              <Dropdown className="relative z-50" dropDownRef={cartRef}>
                 <FaCartShopping className="cursor-pointer text-lg" />
                 {showChartDropdown && (
                   <div className="absolute right-0 top-8 w-[360px] rounded-lg bg-white shadow-[0_12px_60px_-15px_rgba(0,0,0,0.3)]">
