@@ -48,7 +48,7 @@ const ProductLayout = () => {
 
   return (
     <div>
-      <Flex className={"relative flex justify-center gap-9"}>
+      <Flex className={"relative justify-center gap-9"}>
         <div
           ref={productCateRef}
           className="absolute left-0 top-9 w-3/5 md:static md:w-[25%]"
@@ -82,7 +82,7 @@ const ProductLayout = () => {
           )}
         </div>
         <div className="product mt-10 grid w-[92%] grid-cols-1 items-start gap-6 sm:grid-cols-2 md:w-[75%] lg:grid-cols-3">
-          <div className="flex flex-col items-start gap-4 sm:col-span-2 sm:flex-row sm:gap-8 lg:col-span-3 lg:justify-end">
+          <Flex className="flex flex-col items-start gap-4 sm:col-span-2 sm:flex-row sm:gap-8 lg:col-span-3 lg:justify-end">
             <div
               className="cursor-pointer text-2xl sm:w-[20%] sm:text-3xl md:hidden"
               ref={productFilterRef}
@@ -102,7 +102,7 @@ const ProductLayout = () => {
               options={pageShowOptions}
               setSortAndPageShow={setSortAndPageShow}
             />
-          </div>
+          </Flex>
           <PaginatedItems
             itemsPerPage={12}
             sortAndPageShow={+sortAndPageShow}

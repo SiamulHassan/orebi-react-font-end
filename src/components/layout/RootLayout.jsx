@@ -18,22 +18,3 @@ const RootLayout = () => {
 
 export default RootLayout;
 
-////////// or
-// const RootLayout = ({children}) => {
-//   return (
-//     <>
-//       <Navbar />
-//       <Header />
-//       {/* outlet gulake rootLayout component diye wrap kora */}
-//       {children}
-//       <Footer />
-//     </>
-//   );
-// }
-// const Home = () => {
-//   return (
-//     <RootLayout>
-//      all home page components goes here
-//     </RootLayout>
-//   );
-// }

@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="py-4 lg:py-6">
       <Container>
-        <Flex className="lg:flex lg:items-center lg:justify-between">
+        <div className="lg:flex lg:items-center lg:justify-between">
           <div className="w-1/4">
             <Image imageSrc={logo} />
           </div>
@@ -60,7 +60,7 @@ const Navbar = () => {
               </List>
             )}
           </div>
-        </Flex>
+        </div>
       </Container>
     </nav>
   );

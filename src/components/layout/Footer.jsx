@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="mt-36 bg-[#F5F5F3] py-14">
       <Container>
-        <Flex className="relative gap-6 md:static md:flex lg:gap-0">
+        <div className="relative gap-6 md:static md:flex lg:gap-0">
           <div className="inline-block w-[50%] sm:w-[23%] md:w-[15%]">
             {/* same heading desing but component niye kore nai */}
             <h4 className="mb-4 font-dm text-base font-bold">MENU</h4>
@@ -117,8 +117,8 @@ const Footer = () => {
           <div className="absolute -top-11 w-[25%] md:static md:top-0">
             <Image imageSrc={footerLogo} alt="footer logo" />
           </div>
-        </Flex>
-        <Flex className={"mt-16 flex"}>
+        </div>
+        <div className={"mt-16 flex"}>
           <div className="flex w-[50%] items-center gap-4 md:w-[75%]">
             <FaFacebookF />
             <FaInstagram />
@@ -127,7 +127,7 @@ const Footer = () => {
           <p className="w-[50%] text-sm leading-6 text-[#6d6d6d] md:w-[25%]">
             2020 Orebi Minimal eCommerce Figma Template by Adveits
           </p>
-        </Flex>
+        </div>
       </Container>
     </div>
   );

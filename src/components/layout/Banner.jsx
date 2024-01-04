@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import sliderImg from "../../assets/images/slider-1.svg";
 import Image from "./Image";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Banner = () => {
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
   const settings = {
@@ -106,24 +107,24 @@ const Banner = () => {
   };
   return (
     <Slider {...settings}>
-      <div>
+      <Link to={"#"}>
         <Image
           className="h-[35vw] w-full object-cover lg:h-full"
           imageSrc={sliderImg}
         />
-      </div>
-      <div>
+      </Link>
+      <Link to={"#"}>
         <Image
           className="h-[35vw] w-full object-cover lg:h-full"
           imageSrc={sliderImg}
         />
-      </div>
-      <div>
+      </Link>
+      <Link to={"#"}>
         <Image
           className="h-[35vw] w-full object-cover lg:h-full"
           imageSrc={sliderImg}
         />
-      </div>
+      </Link>
     </Slider>
   );
 };

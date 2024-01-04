@@ -7,7 +7,7 @@ const Shop = () => {
   return (
     <div>
       <Container>
-        <BreadCrumb pageTitle="Products" />
+        <BreadCrumb />
         <ProductLayout />
       </Container>
     </div>
