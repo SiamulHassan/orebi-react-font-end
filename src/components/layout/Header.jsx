@@ -90,7 +90,7 @@ const Header = () => {
             </div>
             <div className="relative w-auto lg:w-[600px]">
               <Search
-                className="w-full py-2 pl-3 pr-8 lg:py-4 lg:pl-5 lg:pr-12"
+                className="w-full py-2 pl-3 pr-8 focus:outline-none lg:py-4 lg:pl-5 lg:pr-12 lg:focus:outline-black"
                 placeholder="Search Products"
               />
               <IoIosSearch className="h:5 absolute right-2 top-1/2 w-5 -translate-y-1/2 lg:right-4 lg:h-6 lg:w-6" />

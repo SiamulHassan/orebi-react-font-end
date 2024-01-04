@@ -17,13 +17,13 @@ const ProductCategory = ({ categoryName, data, cateDropdown }) => {
     setSubCatStates(newSub);
   };
   return (
-    <>
+    <div>
       {cateDropdown ? (
         <div
           onClick={handleShoCat}
-          className="mb-8  mt-10 flex cursor-pointer items-center justify-between gap-4"
+          className="mt-10 flex cursor-pointer items-center justify-between gap-4"
         >
-          <h2 className="font-dm text-xl font-bold text-colorBlack">
+          <h2 className="font-dm text-base font-bold text-colorBlack lg:text-xl">
             {categoryName}
           </h2>
           {showCat ? (
@@ -35,7 +35,7 @@ const ProductCategory = ({ categoryName, data, cateDropdown }) => {
       ) : (
         <h2
           onClick={handleShoCat}
-          className="mb-8 mt-10 cursor-pointer font-dm text-xl font-bold text-colorBlack"
+          className="mt-10 cursor-pointer font-dm text-base font-bold text-colorBlack lg:text-xl"
         >
           {categoryName}
         </h2>
@@ -73,7 +73,7 @@ const ProductCategory = ({ categoryName, data, cateDropdown }) => {
                 {subCatStates[i] && productData.subCategory && (
                   <ul className="mt-4">
                     {productData.subCategory.map((subCat, i) => (
-                      <li key={i} className="py-3 text-sm">
+                      <li key={i} className="cursor-pointer py-3 text-sm">
                         {subCat.categoryTitle}
                       </li>
                     ))}
@@ -83,7 +83,7 @@ const ProductCategory = ({ categoryName, data, cateDropdown }) => {
             </ul>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

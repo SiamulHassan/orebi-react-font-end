@@ -16,8 +16,8 @@ function Items({ currentItems }) {
   );
 }
 
-function PaginatedItems({ itemsPerPage, showNum }) {
-  const taleItemsPerPage = showNum ? showNum : itemsPerPage;
+function PaginatedItems({ itemsPerPage, sortAndPageShow }) {
+  const taleItemsPerPage = sortAndPageShow ? sortAndPageShow : itemsPerPage;
 
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + taleItemsPerPage;
@@ -40,7 +40,7 @@ function PaginatedItems({ itemsPerPage, showNum }) {
   return (
     <>
       <Items currentItems={currentItems} />
-      <div className="col-span-3 mt-[50px] flex items-center justify-between">
+      <div className="mt-[50px] flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between lg:col-span-3">
         <ReactPaginate
           breakLabel="..."
           onPageChange={handlePageClick}
@@ -48,7 +48,7 @@ function PaginatedItems({ itemsPerPage, showNum }) {
           // marginPagesDisplayed={4}
           pageCount={pageCount}
           renderOnZeroPageCount={null}
-          containerClassName="flex gap-4 pagination"
+          containerClassName="flex flex-wrap gap-4 pagination"
           pageClassName="border px-4 py-2"
           pageLinkClassName="page-link"
           previousClassName="hidden"
