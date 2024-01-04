@@ -12,7 +12,7 @@ import {
 } from "../../../data/productCategory";
 import SelectBox from "./SelectBox";
 const sortOptions = [
-  { label: "Fashon", selected: true },
+  { value: "Fashon", label: "Fashon" },
   { value: "Mens Collection", label: "Mens Collection" },
   { value: "Womens Collection", label: "Womens Collection" },
   { value: "Young Age", label: "Young Age" },
@@ -94,13 +94,13 @@ const ProductLayout = () => {
               label="Sort By"
               id="sortby"
               options={sortOptions}
-              setSortAndPageShow={setSortAndPageShow}
+              setVal={setSortAndPageShow}
             />
             <SelectBox
               label="Show"
               id="showproduct"
               options={pageShowOptions}
-              setSortAndPageShow={setSortAndPageShow}
+              setVal={setSortAndPageShow}
             />
           </Flex>
           <PaginatedItems

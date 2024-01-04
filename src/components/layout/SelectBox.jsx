@@ -1,9 +1,9 @@
 import React from "react";
 
-const SelectBox = ({ label, options, id, setSortAndPageShow }) => {
+const SelectBox = ({ label, options, id, setVal }) => {
   const handleSortAndPageShow = (e) => {
     // dont conver the value to number here, cause both num and string onchange value needed,so covert where its necessary
-    setSortAndPageShow(e.target.value);
+    setVal(e.target.value);
   };
   return (
     <>
