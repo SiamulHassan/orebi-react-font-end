@@ -1,8 +1,9 @@
 import React from "react";
 
 const Input = (props) => {
+  const width = props.width ? "w-full" : "max-w-[770px]";
   return (
-    <div className="mb-5 max-w-[770px]">
+    <div className={`mb-5 ${width}`}>
       <h4 className="mb-2 font-dm text-base font-bold leading-6 text-colorBlack">
         {props.label}
       </h4>

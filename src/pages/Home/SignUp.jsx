@@ -108,7 +108,12 @@ const SignUp = () => {
               placeholder="05228"
               type="text"
             />
-            <FormSelectBox label="Division" id="division" options={divisions} />
+            <FormSelectBox
+              Box
+              label="Division"
+              id="division"
+              options={divisions}
+            />
             <FormSelectBox label="District" id="district" options={districts} />
           </div>
         </FormLayout>
@@ -144,17 +149,21 @@ const SignUp = () => {
           <span>Subscribe Newsletter</span>
           <div className="flex items-center gap-10">
             <div>
-              <input type="checkbox" />
-              <span className="ml-3">Yes</span>
+              <input type="checkbox" id="yes" />
+              <label htmlFor="yes" className="ml-3">
+                Yes
+              </label>
             </div>
             <div>
-              <input type="checkbox" />
-              <span className="ml-3">No</span>
+              <input id="no" type="checkbox" />
+              <label htmlFor="no" className="ml-3">
+                No
+              </label>
             </div>
           </div>
         </div>
       </div>
-      <Button>Login</Button>
+      <Button className={"cursor-pointer"}>Login</Button>
     </Container>
   );
 };

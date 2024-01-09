@@ -11,6 +11,7 @@ import About from "./pages/Home/About";
 import Contacts from "./pages/Home/Contacts";
 import Login from "./pages/Home/Login";
 import SignUp from "./pages/Home/SignUp";
+import Checkout from "./components/layout/Checkout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="/contacts" element={<Contacts />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
+      <Route path="/checkout" element={<Checkout />}></Route>
     </Route>,
   ),
 );
