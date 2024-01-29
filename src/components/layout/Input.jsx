@@ -3,7 +3,7 @@
 import React from "react";
 
 const Input = (props) => {
-  const width = props.width ? "w-full" : "max-w-[770px]";
+  const width = props.width ? "w-full my-4" : "max-w-[770px]";
   return (
     <div className={` ${width}`}>
       <h4 className="mb-2 font-dm text-base font-bold leading-6 text-colorBlack">

@@ -36,7 +36,7 @@ const Checkout = () => {
       </p>
       <div className="mt-28">
         <FormLayout formTitle={"Billing Details"}>
-          <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-[35%,35%]">
+          <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-[35%,35%] sm:gap-x-10">
             <Input
               as="input"
               label="First Name *"
@@ -64,6 +64,7 @@ const Checkout = () => {
               id="country"
               options={countries}
             />
+
             <Input
               as="input"
               label="Street Address *"
@@ -115,7 +116,6 @@ const Checkout = () => {
               width="fullWidth"
             />
           </div>
-
           <div className=" mt-28">
             <h2 className="mb-9 font-dm text-4xl font-bold text-colorBlack">
               Additional Information

@@ -37,7 +37,7 @@ const Login = () => {
             onSubmit={formik.handleSubmit}
             formTitle={"Returning Customer"}
           >
-            <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-[35%,35%]">
+            <div className="grid grid-cols-1 gap-y-5 sm:grid-cols-[35%,35%] sm:gap-x-10">
               <div>
                 <Input
                   as="input"
