@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
-const FormSelectBox = ({ label, id, options }) => {
+const FormSelectBox = ({ label, id, options, onChange, value, name }) => {
   return (
     <div className="mb-5">
       <label
@@ -10,6 +11,9 @@ const FormSelectBox = ({ label, id, options }) => {
         {label}
       </label>
       <select
+        onChange={onChange}
+        value={value}
+        name={name}
         id={id}
         className="w-full border-b pb-3 text-secondary outline-none"
       >

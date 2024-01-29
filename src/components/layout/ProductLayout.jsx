@@ -91,13 +91,13 @@ const ProductLayout = () => {
             </div>
 
             <SelectBox
-              label="Sort By:"
+              label="Sort By"
               id="sortby"
               options={sortOptions}
               setVal={setSortAndPageShow}
             />
             <SelectBox
-              label="Show:"
+              label="Show"
               id="showproduct"
               options={pageShowOptions}
               setVal={setSortAndPageShow}
