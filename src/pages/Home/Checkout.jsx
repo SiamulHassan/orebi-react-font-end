@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "./Container";
-import BreadCrumb from "./BreadCrumb";
+import Container from "../../components/layout/Container";
+import BreadCrumb from "../../components/layout/BreadCrumb";
 import { Link } from "react-router-dom";
-import FormLayout from "./FormLayout";
-import Input from "./Input";
-import FormSelectBox from "./FormSelectBox";
+import FormLayout from "../../components/layout/FormLayout";
+import Input from "../../components/layout/Input";
+import FormSelectBox from "../../components/layout/FormSelectBox";
 const countries = [
   {
     label: "Bangladesh",
@@ -134,18 +134,24 @@ const Checkout = () => {
           </h2>
           <table className="w-[360px] border-collapse border border-slate-400 lg:w-1/2">
             <thead>
-              <tr className="text-leftlll">
+              <tr className="text-left">
                 <th className="border border-blue-100 p-3">Product</th>
-                <th className="border border-blue-100 p-3">Total</th>
+                <th className="border border-blue-100 p-3 font-normal text-secondary">
+                  Total
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border border-blue-100 p-3">Product name x 1</td>
-                <td className="border border-blue-100 p-3">389.99 $</td>
+                <td className="border border-blue-100 p-3 font-bold">
+                  Product name x 1
+                </td>
+                <td className="border border-blue-100 p-3 text-secondary">
+                  389.99 $
+                </td>
               </tr>
               <tr>
-                <td className="border border-solid border-blue-100 p-3">
+                <td className="border border-solid border-blue-100 p-3 font-bold">
                   Subtotal
                 </td>
                 <td className="border border-solid border-blue-100 p-3">
@@ -153,7 +159,7 @@ const Checkout = () => {
                 </td>
               </tr>
               <tr>
-                <td className="border border-solid border-blue-100 p-3">
+                <td className="border border-solid border-blue-100 p-3 font-bold">
                   Total
                 </td>
                 <td className="border border-solid border-blue-100 p-3">

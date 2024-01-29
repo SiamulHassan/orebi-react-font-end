@@ -43,14 +43,17 @@ const Navbar = () => {
                 />
                 <ListItem
                   itemName="Shop"
+                  href="/products"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
                 />
                 <ListItem
                   itemName="About"
+                  href="/about"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
                 />
                 <ListItem
                   itemName="Contacts"
+                  href="/contacts"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
                 />
                 <ListItem

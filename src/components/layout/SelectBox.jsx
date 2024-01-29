@@ -11,7 +11,7 @@ const SelectBox = ({ label, options, id, setVal }) => {
         htmlFor={id}
         className="mb-2 block font-dm text-base text-secondary"
       >
-        {label}:
+        {label}
       </label>
       <select
         onChange={handleSortAndPageShow}

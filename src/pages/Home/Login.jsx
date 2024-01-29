@@ -5,8 +5,23 @@ import FormLayout from "../../components/layout/FormLayout";
 import Input from "../../components/layout/Input";
 import Button from "../../components/layout/Button";
 import Devider from "../../components/layout/Devider";
+import { useFormik } from "formik";
+import InputError from "../../components/layout/InputError";
+import { signIn } from "../../validation/validation";
 
 const Login = () => {
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+  const formik = useFormik({
+    initialValues,
+    validationSchema: signIn,
+    onSubmit: (data) => {
+      console.log(data);
+    },
+  });
+
   return (
     <div>
       <Container>
@@ -18,22 +33,48 @@ const Login = () => {
         </p>
         <Devider />
         <div className="mt-14">
-          <FormLayout formTitle={"Returning Customer"}>
+          <FormLayout
+            onSubmit={formik.handleSubmit}
+            formTitle={"Returning Customer"}
+          >
             <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-[35%,35%]">
-              <Input
-                as="input"
-                label="Email address"
-                placeholder="company@domain.com"
-                type="text"
-              />
-              <Input
-                as="input"
-                label="Password"
-                placeholder="..."
-                type="password"
-              />
+              <div>
+                <Input
+                  as="input"
+                  onChange={formik.handleChange}
+                  name="email"
+                  value={formik.values.email}
+                  label="Email address"
+                  placeholder="company@domain.com"
+                  type="text"
+                />
+                <InputError
+                  error={formik.errors.email}
+                  touched={formik.touched.email}
+                />
+              </div>
+              <div>
+                <Input
+                  onChange={formik.handleChange}
+                  name="password"
+                  value={formik.values.password}
+                  as="input"
+                  label="Password"
+                  placeholder="..."
+                  type="password"
+                />
+                <InputError
+                  error={formik.errors.password}
+                  touched={formik.touched.password}
+                />
+              </div>
             </div>
-            <Button className={"mt-7 inline-block"} bg="bg-white">
+
+            <Button
+              type={"submit"}
+              className={"mt-7 inline-block"}
+              bg="bg-white"
+            >
               Login
             </Button>
             <Devider />
