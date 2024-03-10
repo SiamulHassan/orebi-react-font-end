@@ -17,6 +17,7 @@ import Image from "./Image";
 // images
 import chartImg from "../../assets/images/product-11.png";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 const Header = () => {
   const categoryDropdownRef = useRef(null);
   const userRef = useRef(null);
@@ -135,7 +136,10 @@ const Header = () => {
                           <h3>Black Smart Watch</h3>
                           <p className="mt-2">$44.00</p>
                         </div>
-                        <LiaTimesSolid className="text-xl" />
+                        <LiaTimesSolid
+                          className="cursor-pointer text-xl"
+                          onClick={(prev) => setShowChartDropdown(!prev)}
+                        />
                       </div>
                     </Flex>
                     <div className="bg-white px-5 pb-5 pt-4">
@@ -148,7 +152,7 @@ const Header = () => {
                           View Cart
                         </Button>
                         <Button className="bg-black px-8 py-4 text-white">
-                          Checkout
+                          <Link to="checkout">Checkout</Link>
                         </Button>
                       </div>
                     </div>

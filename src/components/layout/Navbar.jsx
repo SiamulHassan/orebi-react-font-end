@@ -7,6 +7,7 @@ import logo from "../../assets/images/logo.png";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import Container from "./Container";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -28,7 +29,9 @@ const Navbar = () => {
       <Container>
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="w-1/4">
-            <Image imageSrc={logo} />
+            <Link to="/">
+              <Image imageSrc={logo} />
+            </Link>
           </div>
           <div className=" w-full lg:w-3/4">
             <FaBarsStaggered
@@ -40,22 +43,32 @@ const Navbar = () => {
                 <ListItem
                   itemName="Home"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="/"
                 />
                 <ListItem
                   itemName="Shop"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="products"
                 />
                 <ListItem
                   itemName="About"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="about"
                 />
                 <ListItem
                   itemName="Contacts"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="contacts"
                 />
                 <ListItem
-                  itemName="Journal"
+                  itemName="Login"
                   className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="login"
+                />
+                <ListItem
+                  itemName="Signup"
+                  className="my-2.5 transition-all duration-200 hover:font-bold lg:my-0"
+                  href="signup"
                 />
               </List>
             )}
